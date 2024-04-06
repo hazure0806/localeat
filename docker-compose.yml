@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  frontend:
+    build: ./localeat_frontend
+    volumes:
+      - ./localeat_frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
