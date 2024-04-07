@@ -14,7 +14,10 @@ RUN yarn install
 COPY . .
 
 # アプリケーションがリッスンするポートを指定
-EXPOSE 3000
+EXPOSE 3001
+
+# コマンドを実行
+CMD ["tail", "-f", "/dev/null"]
 
 # アプリケーションを起動
-CMD ["yarn", "start"]
+# CMD ["yarn", "start"]
