@@ -54,7 +54,7 @@ export default function Appbar() {
             color={useColorModeValue("gray.800", "white")}
             fontSize={"xl"}
           >
-            LocalEat
+            localeat
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -68,26 +68,30 @@ export default function Appbar() {
           direction={"row"}
           spacing={6}
         >
+          {/* Sign In ボタンを非活性にし、文字を白くする */}
           <Button
             as={"a"}
             fontSize={"sm"}
             fontWeight={400}
             variant={"link"}
             href={"#"}
+            isDisabled={true} // 非活性
+            color={"white"} // テキストの色を白に
           >
             Sign In
           </Button>
+
+          {/* Sign Up ボタンを非活性にし、文字を白くする */}
           <Button
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
-            color={"white"}
+            color={"white"} // テキストの色を白に
             bg={"pink.400"}
             href={"#"}
-            _hover={{
-              bg: "pink.300",
-            }}
+            isDisabled={true} // 非活性
+            _hover={{ bg: "pink.300" }} // ホバー時の色
           >
             Sign Up
           </Button>

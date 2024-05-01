@@ -70,6 +70,12 @@ export const Main: React.FC = () => {
     }
   }, [location]);
 
+  // 検索アクションを実行する関数
+  const onSearch = (prefectureName: string) => {
+    const prefecture = prefectureName
+    setPrefectureName(prefecture);
+  };
+
   return (
     <div>
       <Appbar />
@@ -79,7 +85,7 @@ export const Main: React.FC = () => {
         prefectureImage={aichi}
       />
 
-      <FoodSlide items={food} />
+      <FoodSlide items={food} onSearch={onSearch}/>
 
       <Footer />
     </div>
